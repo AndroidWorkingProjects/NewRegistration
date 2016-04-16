@@ -57,11 +57,14 @@ public class MainActivity extends AppCompatActivity implements AppBarLayout.OnOf
 
                 ViewGroup.LayoutParams params = appBarLayout.getLayoutParams();
                 params.height = (int)(activityRootView.getHeight()*.3);
-                //nestedScrollView.setMinimumHeight(activityRootView.getHeight() - height);
+                nestedScrollView.setMinimumHeight(activityRootView.getHeight() - height);
                 appBarLayout.setLayoutParams(params);
+
+
             }
         });
 
+/*
         nestedScrollView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
@@ -70,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements AppBarLayout.OnOf
                 //activityRootView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
             }
         });
+*/
 
     }
 
